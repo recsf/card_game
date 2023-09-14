@@ -1,8 +1,9 @@
 import sys
+import class_Deck
 
 
 def play(argv):
-    deck = Deck()
+    deck = class_Deck.Deck()
     hands = []
     for i in range(1, 5):
         player = 'Player %d' % i

@@ -1,4 +1,5 @@
 import random
+import class_Card
 
 
 class Deck:
@@ -6,7 +7,7 @@ class Deck:
         self.cards = []
         for suit in range(4):
             for rank in range(13):
-                card = Card(suit, rank)
+                card = class_Card.Card(suit, rank)
                 self.cards.append(card)
 
     def __str__(self):
@@ -30,7 +31,8 @@ class Deck:
     def sort(self):
         self.cards.sort()
 
-    def wincard(self, cards):
+    @staticmethod
+    def wincard(cards):
         winner = cards[0]
         for card in cards:
             if winner < card:

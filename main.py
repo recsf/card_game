@@ -1,5 +1,6 @@
 import sys
 import class_Deck
+import class_Hand
 
 
 def play(argv):
@@ -9,7 +10,7 @@ def play(argv):
         player = 'Player %d' % i
         if len(argv) > i:
             player = argv[i]
-        hands.append(Hand(player))
+        hands.append(class_Hand.Hand(player))
 
     while len(deck) > 0:
         for hand in hands:
